@@ -1224,7 +1224,7 @@ Renvoie le temps écoulé en millisecondes (depuis le 1er janvier 1970)
 <!--- suggest_end --->
 
 ## Stockage
-L'objet ```storage``` permet de stocker des données de manière permanente. Voud pouvez ainsi sauvegarder le progrès du joueur, une liste des meilleurs scores ou toute autre information sur l'état de votre jeu ou projet.
+L'objet ```storage``` permet de stocker des données de manière permanente. Vous pouvez ainsi sauvegarder le progrès du joueur, une liste des meilleurs scores ou toute autre information sur l'état de votre jeu ou projet.
 
 <!--- suggest_start storage.set --->
 ### storage.set( nom , valeur )
