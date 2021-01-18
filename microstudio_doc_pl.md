@@ -1,29 +1,29 @@
-**microStudio** is an integrated video game development environment.
-It includes all the tools you need to create your first video game!
-**microStudio** offers all the following possibilities:
+**microStudio** to zintegrowane środowisko do tworzenia gier wideo.
+Zawiera ono wszystkie narzędzia, których potrzebujesz do stworzenia swojej pierwszej gry wideo!
+**microStudio** oferuje wszystkie poniższe możliwości:
 
-* a sprite editor (images, in pixel art)
-* a map editor (i.e. maps or levels)
-* a code editor to program in microScript, a simple yet powerful language
-* 100% online operation allowing you to test your game instantly at any time during its development
-* the possibility to easily install the game, finished or in progress, on smartphones and tablets
-* the ability to work with several people on the same project with instant synchronization
-* Community sharing features that allow you to explore others' projects, learn and reuse anything you want for your own project.
+* edytor sprite'ów (obrazy, pixel art)
+* edytor map (tzn. mapy lub poziomy)
+* edytor kodu do programowania w microScript, prostym, ale potężnym języku
+* działanie w 100% online, pozwalające na natychmiastowe testowanie gry w dowolnym momencie podczas jej tworzenia
+* możliwość łatwego zainstalowania gry, skończonej lub wciąż rozwijanej, na smartfonach i tabletach
+* możliwość pracy z kilkoma osobami nad tym samym projektem z natychmiastową synchronizacją
+* Funkcje pozwalające dzielić się swoimi projektami z innymi, uczyć się i używać ponownie wszystkiego, co przyda się w Twoim projekcie.
 
-# Quick start
+# Szybki start
 
-You can start by exploring projects made by other users, in the *Explore* section.
+Możesz zacząć od zapoznania się z projektami wykonanymi przez innych użytkowników, w sekcji *Przeglądaj*.
 
-To start creating a game it is necessary to create an account. Choose a nickname (avoid using
-your real name), enter your email address (necessary in case of password forgetfulness; must be validated to be able to publish) and let's go!
+Aby rozpocząć tworzenie gry konieczne jest założenie konta. Wybierz pseudonim (unikaj używania
+swojego prawdziwego imienia i nazwiska), wpisz swój adres e-mail (niezbędny w przypadku zapomnienia hasła; musi być potwierdzony, aby móc opublikować grę) i ruszamy!
 
-## First project
+## Pierwszy projekt
 
-You can either create a new empty project in the Create section, or choose an existing project in the Explorer section and click on the "Clone" button to create your own copy and start customizing it.
+Możesz utworzyć nowy, pusty projekt w sekcji "Twórz" lub wybrać istniejący projekt w sekcji "Przeglądaj" i kliknąć przycisk "Sklonuj", aby utworzyć własną kopię i rozpocząć dostosowywanie jej.
 
-### Code
+### Kod
 
-Once your project has been created, you are in the "Code" section. This is where you can start programming. Try to copy and paste the code below:
+Po utworzeniu Twojego projektu znajdziesz się w sekcji "Kod". Tutaj możesz rozpocząć programowanie. Spróbuj skopiować i wkleić poniższy kod:
 
 ```
 draw = function()
@@ -31,13 +31,13 @@ draw = function()
 end
 ```
 
-### Execute
+### Uruchom
 
-Then click on the Play button on the right-hand side of the screen. Your program starts and you see that the code above displays the project icon in the middle of the screen. Change the display coordinates (the digits 0 and 100) to see the position and dimensions of the icon vary.
+Następnie kliknij przycisk Graj po prawej stronie ekranu. Twój program zostanie uruchomiony i zobaczysz, że powyższy kod wyświetla na środku ekranu ikonę projektu. Zmień współrzędne wyświetlania (liczby 0 i 100), aby zobaczyć jak zmienia się położenie i wymiary ikony.
 
-### Modify in real time
+### Modyfikuj w czasie rzeczywistym
 
-You can then make this first program more interactive, by copying and pasting the code below:
+Możesz uczynić ten pierwszy program bardziej interaktywnym, kopiując i wklejając poniższy kod:
 
 ```
 update = function()
@@ -53,15 +53,15 @@ draw = function()
 end
 ```
 
-This time the program allows you to move the project icon with the keyboard arrows. The meaning of the functions ```update``` and ```draw```, the test of the keyboard keys with ```keyboard```, the drawing on the screen with ```screen``` are all explained in detail later in this documentation.
+Tym razem program pozwala na przesuwanie ikony projektu za pomocą strzałek na klawiaturze. Znaczenie funkcji ```update``` i ```draw```, sprawdzanie naciśnięcia klawiszy klawiatury przez ```keyboard``` oraz rysowanie na ekranie z użyciem ```screen``` są szczegółowo objaśnione w dalszej części dokumentacji.
 
-You can also go to the Sprites section, click on the "icon" element and start editing the image. When you return to the Code section, you will see that your changes are instantly taken into account in the program currently running.
+Możesz również przejść do sekcji Sprite'y, kliknąć na element "icon" i rozpocząć edycję obrazka. Po powrocie do sekcji Kod, zobaczysz, że twoje zmiany są natychmiast uwzględniane w aktualnie uruchomionym programie.
 
-# Explore
+# Przeglądaj
 
-The main section *Explorer* allows you to discover projects created by other users. You can find examples of games, reusable templates, sprite libraries in different styles and themes. If you are interested in a particular project, you can clone it, i.e. create a complete copy of it that you can then modify and reuse for your own purposes.
+Sekcja *Przeglądaj* pozwoli Ci znaleźć projekty tworzone przez innych użytkowników. Znajdziesz tu przykłady gier, szablony wielokrotnego użytku, biblioteki sprite'ów w różnych stylach i tematach. Jeśli interesuje Cię konkretny projekt, możesz go sklonować, tzn. stworzyć jego kompletną kopię, którą następnie możesz zmodyfikować i ponownie wykorzystać do własnych celów.
 
-If you have previously opened one of your projects in the Create section, you will be able to import each sprite or source file of the projects you are exploring to your current project. This allows you to pick images or features that interest you from among the community's public projects, and reuse them for your own purposes.
+Jeśli wcześniej został przez Ciebie otwarty jeden z Twoich projektów w sekcji Twórz, możesz zaimportować każdego sprite'a lub plik źródłowy z projektów, które przeglądasz, do swojego aktualnego projektu. Dzięki temu możesz wybrać interesujące Cię obrazki lub funkcje z publicznych projektów innych członków społeczności i użyć ich ponownie do własnych celów.
 
 # Create a project
 
