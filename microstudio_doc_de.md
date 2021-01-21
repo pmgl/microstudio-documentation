@@ -35,7 +35,7 @@ end
 
 ### Ausführen
 
-Klicken Sie anschließend auf die Schaltfläche "Play" auf der rechten Seite des Bildschirms. Ihr Programm startet und Sie sehen, dass der obige Code das Projektsymbol in der Mitte des Bildschirms anzeigt. Ändern Sie die Anzeigekoordinaten (die Ziffern 0 und 100), um zu sehen, wie die Position und die Abmessungen des Symbols variieren.
+Klicken Sie anschließend auf die Schaltfläche "Play" auf der rechten Seite des Bildschirms. Ihr Programm startet und Sie sehen, dass der obige Code das Projektsymbol in der Mitte des Bildschirms anzeigt. Ändern Sie die Anzeigekoordinaten (die Ziffern 0 und 100), um zu sehen wie die Position und die Abmessungen des Symbols variieren.
 
 ### Ändern Sie in Echtzeit
 
@@ -55,9 +55,9 @@ draw = function()
 end
 ```
 
-Diesmal erlaubt Ihnen das Programm, das Projektsymbol mit den Tastaturpfeilen zu verschieben. Die Bedeutung der Funktionen ```Aktualisieren`` und ```Zeichnen``, das Testen der Tastaturtasten mit ``Tastatur``, das Zeichnen auf dem Bildschirm mit ``Screen`` werden alle später in dieser Dokumentation ausführlich erklärt.
+Diesmal erlaubt Ihnen das Programm das Projektsymbol mit den Tastaturpfeilen zu verschieben. Die Bedeutung der Funktionen ```update``` und ```draw```, das Testen der Tastaturtasten mit ```keyboard```, das Zeichnen auf dem Bildschirm mit ```draw``` werden alle später in dieser Dokumentation ausführlich erklärt.
 
-Sie können auch in den Abschnitt Sprites gehen, auf das Element "icon" klicken und mit der Bearbeitung des Bildes beginnen. Wenn Sie in den Abschnitt "Code" zurückkehren, werden Sie sehen, dass Ihre Änderungen sofort in dem gerade laufenden Programm berücksichtigt werden.
+Sie können auch in den Abschnitt *Sprites* gehen, auf das Element "icon" klicken und mit der Bearbeitung des Bildes beginnen. Wenn Sie in den Abschnitt *Code* zurückkehren, werden Sie sehen dass Ihre Änderungen sofort in dem gerade laufenden Programm berücksichtigt werden.
 
 #Erkunden
 
@@ -103,7 +103,7 @@ end
 
 ### Funktion ```Update()```
 <!--- help_start update = function --->
-Die Funktion ```update`` wird 60 mal pro Sekunde aufgerufen. Der Körper dieser Funktion ist der beste Ort, um die Logik und Physik des Spiels zu programmieren: Zustandsänderungen, Sprite- oder Feindbewegungen, Kollisionserkennung, Tastatur, Auswertung von Touch- oder Gamepad-Eingaben, etc.
+Die Funktion ```update``` wird 60 mal pro Sekunde aufgerufen. Der Körper dieser Funktion ist der beste Ort, um die Logik und Physik des Spiels zu programmieren: Zustandsänderungen, Sprite- oder Feindbewegungen, Kollisionserkennung, Tastatur, Auswertung von Touch- oder Gamepad-Eingaben, etc.
 <!--- help_end --->
 
 ##### Beispiel
