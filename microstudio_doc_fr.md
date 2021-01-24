@@ -283,7 +283,7 @@ print(liste[2])
 On peut aussi facilement parcourir une liste avec une boucle ```for``` :
 
 ```
-for element in list
+for element in liste
   print(element)
 end
 ```
@@ -462,7 +462,7 @@ L'exemple ci-dessus affiche dans la console les nombres de 0 à 10 en avançant 
 
 ```
 liste = [2,3,5,7,11]
-for nombre in list
+for nombre in liste
   print(nombre)
 end
 ```
