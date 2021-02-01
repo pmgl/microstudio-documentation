@@ -1149,7 +1149,65 @@ In the same way as for keyboard key presses, you can use ```gamepad.press.<BUTTO
 
 ## Sounds
 
-*microStudio* will soon have a dedicated section to create sounds and music. In the meantime, it is possible to use the *beeper* to add sound to your creations in a simple way.
+*microStudio* currently allows you to play sounds and music you have imported to your project (as WAV files and MP3 files) or to create sounds programmatically using the legacy *beeper*.
+
+<!--- suggest_start audio.playSound --->
+### audio.playSound( name, volume, pitch, pan, loop )
+Plays the given sound, with optional given playback settings.
+<!--- suggest_end --->
+
+##### arguments
+|Argument|Description|
+|-|-|
+|name|The name of the sound (from the sounds tab of your project) to play|
+|volume|[optional] The output volume for this sound playback, ranging from 0 to 1|
+|pitch|[optional] The output pitch for this sound playback, 1 is the default pitch|
+|pan|[optional] The pan setting for this sound playback, ranging from -1 (left) to 1 (right)|
+|loop|[optional] Set to 1 (true) if you want the sound to loop indefinitely|
+
+The function call returns an object. This object allows you to control the playback settings while the sound is being played:
+
+##### example
+```
+my_sound = audio.playSound("soundname")
+my_sound.setVolume(0.5)
+```
+
+|Control functions|description|
+|-|-|
+|my_sound.setVolume(volume)|Changes the playback volume of the sound (value ranging from 0 to 1)|
+|my_sound.setPitch(pitch)|Changes the pitch of the sound (1 is default pitch)|
+|my_sound.setPan(pan)|Changes the pan setting of the sound (value ranging from -1 to 1)|
+|my_sound.stop()|Stops the playback of that sound|
+
+<!--- suggest_start audio.playMusic --->
+### audio.playMusic( name, volume, loop )
+Plays the given music, with optional given playback settings.
+<!--- suggest_end --->
+
+##### arguments
+|Argument|Description|
+|-|-|
+|name|The name of the music (from the music tab of your project) to play|
+|volume|[optional] The output volume for this music playback, ranging from 0 to 1|
+|loop|[optional] Set to 1 (true) if you want the music to loop indefinitely|
+
+The function call returns an object. This object allows you to control the playback settings while the music is being played:
+
+##### example
+```
+my_music = audio.playMusic("musicname")
+my_music.setVolume(0.5)
+```
+
+|Control functions|description|
+|-|-|
+|my_music.setVolume(volume)|Changes the playback volume of the music (value ranging from 0 to 1)|
+|my_music.stop()|Stops the playback of that music|
+|my_music.play()|Resumes the playback is you stopped it before|
+|my_music.getPosition()|Returns the current playback position in seconds|
+|my_music.getDuration()|Returns the total music duration in seconds|
+
 
 <!--- suggest_start audio.beep --->
 ### audio.beep
