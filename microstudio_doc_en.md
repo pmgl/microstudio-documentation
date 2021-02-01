@@ -1151,8 +1151,9 @@ In the same way as for keyboard key presses, you can use ```gamepad.press.<BUTTO
 
 *microStudio* currently allows you to play sounds and music you have imported to your project (as WAV files and MP3 files) or to create sounds programmatically using the legacy *beeper*.
 
+### Play Sound
 <!--- suggest_start audio.playSound --->
-### audio.playSound( name, volume, pitch, pan, loop )
+##### audio.playSound( name, volume, pitch, pan, loop )
 Plays the given sound, with optional given playback settings.
 <!--- suggest_end --->
 
@@ -1180,8 +1181,9 @@ my_sound.setVolume(0.5)
 |my_sound.setPan(pan)|Changes the pan setting of the sound (value ranging from -1 to 1)|
 |my_sound.stop()|Stops the playback of that sound|
 
+### Play Music
 <!--- suggest_start audio.playMusic --->
-### audio.playMusic( name, volume, loop )
+##### audio.playMusic( name, volume, loop )
 Plays the given music, with optional given playback settings.
 <!--- suggest_end --->
 
