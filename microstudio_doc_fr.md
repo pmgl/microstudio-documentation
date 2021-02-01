@@ -1143,7 +1143,66 @@ enfoncé ou ```gamepad.release.<BOUTON>```pour savoir si un bouton vient juste d
 
 ## Sons (```audio```)
 
-*microStudio* disposera bientôt d'une section dédiée pour créer des sons et de la musique. En attendant, il est possible d'utiliser le *beeper* pour sonoriser vos créations de façon simple.
+*microStudio* vous permet maintenant de jouer des sons et musiques que vous avez importées dans votre projet (sous la forme de fichiers WAV ou MP3). Vous pouvez aussi créer des sons avec du code en utilisant le *beeper*.
+
+### Jouer un son
+<!--- suggest_start audio.playSound --->
+##### audio.playSound( nom, volume, vitesse, panoramique, boucle )
+Joue le son donné, avec les éventuels paramètres optionnels.
+<!--- suggest_end --->
+
+##### paramètres
+|Paramètre|Description|
+|-|-|
+|nom|Le nom du son à jouer (son identifiant dans l'onglet Sons de votre projet)|
+|volume|[optionnel] Le volume de sortie de 0 à 1|
+|vitesse|[optionnel] La vitesse de lecture du son, 1 étant la vitesse par défaut|
+|panoramique|[optionnel] Le réglage de panoramique, variant de -1 (gauche) à 1 (droite)|
+|boucle|[optionnel] Réglez à 1 (vrai) si vous voulez que le son soit joué en boucle|
+
+L'appel de fonction renvoie un objet. Cet objet permet de contrôler la lecture du son pendant qu'il est joué :
+
+##### exemple
+```
+mon_son = audio.playSound("monson")
+mon_son.setVolume(0.5)
+```
+
+|Fonction de contrôle|description|
+|-|-|
+|mon_son.setVolume(volume)|Modifie le volume de lecture du son (entre 0 et 1)|
+|mon_son.setPitch(vitesse)|Modifie la vitesse de lecture du son (1 est la vitesse normale)|
+|mon_son.setPan(pan)|Modifie le panoramique (de -1 à 1)|
+|mon_son.stop()|Stoppe la lecture du son|
+
+### Jouer une musique
+<!--- suggest_start audio.playMusic --->
+##### audio.playMusic( nom, volume, boucle )
+Joue la musique donnée, avec les réglages optionnels.
+<!--- suggest_end --->
+
+##### paramètres
+|Paramètre|Description|
+|-|-|
+|nom|Le nom de la musique (son identifiant dans l'onglet musique de votre projet)|
+|volume|[optionnel] Le volume de lecture, entre 0 et 1|
+|boucle|[optionnel] Réglez à 1 (vrai) si vous voulez que la musique soit jouée en boucle|
+
+L'appel de fonction renvoie un objet. Cet objet permet de contrôler la lecture de la musique pendant qu'elle est jouée :
+
+##### exemple
+```
+ma_musique = audio.playMusic("mamusique")
+ma_musique.setVolume(0.5)
+```
+
+|Fonction de contrôle|description|
+|-|-|
+|ma_musique.setVolume(volume)|Modifie le volume de lecture de la musique (entre 0 et 1)|
+|ma_musique.stop()|Stoppe la musique|
+|ma_musique.play()|Reprend la lecture, si vous l'aviez stoppée avant|
+|ma_musique.getPosition()|Renvoie la position de lecture actuelle en secondes|
+|ma_musique.getDuration()|Renvoie la durée totale de la musique, en secondes|
 
 <!--- suggest_start audio.beep --->
 ### audio.beep
