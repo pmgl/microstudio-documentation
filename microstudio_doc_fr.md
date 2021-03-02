@@ -594,6 +594,7 @@ L'objet random permet de générer des nombre pseudo-aléatoires. Il est possibl
 ## Ordonner une liste
 
 Vous pouvez trier les éléments d'une liste en utilisant la fonction ```liste.sortList(compareFunction)```. La fonction ```compareFunction``` que vous fournissez doit accepter deux arguments (que nous appellerons ```a``` et ```b```) et doit renvoyer :
+
 |Valeur renvoyée|quand|
 |-|-|
 |un nombre négatif|quand ```a``` doit être classé avant ```b``` (a est moins que b)|
