@@ -595,6 +595,34 @@ The random object is used to generate pseudo-random numbers. It is possible to i
 |```list.removeElement(element)```|Removes from the list ```element```, if it can be found in the list|
 |```list1.concat(list2)```|Returns a new list obtained by appending list2 to list1|
 
+## Sorting a list
+
+You can sort the elements of a list using the function ```list.sortList(compareFunction)```. The ```compareFunction``` you provide has to accept two arguments (which we will call ```a``` and ```b```) and should return:
+|Return value|when|
+|-|-|
+|a negative number|when ```a``` must be sorted before ```b```(a is less than b)|
+|zero|when ```a``` and ```b``` have an equal position regarding to the desired ordering criterion|
+|a positive number|when ```a``` must be sorted after ```b``` (a is greater than b)|
+
+##### example
+
+The example below assumes that the list contains *points*, each point having an ```x``` coordinate field. We want to sort the points from the lesser value of point.x to the greater value of point.x:
+
+```
+compare = function(point1,point2)
+  return point1.x - point2.x
+end
+
+list.sortList(compare)
+```
+
+Note that you could make the code above shorter:
+
+```
+list.sortList(function(point1,point2) point1.x - point2.x end)
+```
+
+Whenever a comparison function is not provided, the elements of the list will be sorted according to the alphabetical order.
 
 ## Comments
 
