@@ -591,6 +591,35 @@ L'objet random permet de générer des nombre pseudo-aléatoires. Il est possibl
 |```liste.removeElement(element)```|Retire l'élément ```element```, s'il se trouve quelque part dans la liste|
 |```liste1.concat(liste2)```|Renvoie une nouvelle liste, qui est la concaténation de liste1 et liste 2|
 
+## Ordonner une liste
+
+Vous pouvez trier les éléments d'une liste en utilisant la fonction ```liste.sortList(compareFunction)```. La fonction ```compareFunction``` que vous fournissez doit accepter deux arguments (que nous appellerons ```a``` et ```b```) et doit renvoyer :
+|Valeur renvoyée|quand|
+|-|-|
+|un nombre négatif|quand ```a``` doit être classé avant ```b``` (a est moins que b)|
+|zéro|quand ```a``` et ```b``` ont une position équivalente du point de vue du critère de tri choisi|
+|un nombre positif|quand ```a``` doit être classé après ```b``` (a est plus que b)|
+
+##### exemple
+
+L'exemple ci-dessous considère que la liste contient des *points*, chaque point ayant un champ coordonnée ```x```. Nous voulons ordonner les points de la plus petite valeur de point.x jusqu'à la plus grande valeur de point.x :
+
+```
+compare = function(point1,point2)
+  return point1.x - point2.x
+end
+
+liste.sortList(compare)
+```
+
+Notez que nous pouvons écrire le même code de façon plus concise :
+
+```
+liste.sortList(function(point1,point2) point1.x - point2.x end)
+```
+
+Lorsque la fonction de comparaison n'est pas fournie, les éléments seront ordonnés selon l'ordre alphabétique.
+
 ## Commentaires
 Les commentaires en *microScript* peuvent être ajoutés après un double-slash : ```//``` ; tout ce qui suit jusqu'au prochain retour à la ligne est ignoré lors de l'analyse du programme.
 
