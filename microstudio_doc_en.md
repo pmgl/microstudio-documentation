@@ -765,8 +765,8 @@ The color is defined by a string of characters, so between quotation marks "". I
 
 ### Clear screen
 <!--- suggest_start screen.clear --->
-##### screen.clear()
-Clears the screen (fills it with black color).
+##### screen.clear(color)
+Clears the screen (fills it with the provided color, or with black if no color is passed as argument).
 <!--- suggest_end --->
 
 ### Drawing shapes
@@ -892,6 +892,15 @@ Draws text on the screen. The first parameter is the text to be displayed, then 
 
 ```
 screen.drawText("Hello!",0,0,30, "#FFF")
+```
+
+<!--- suggest_start screen.drawTextOutline --->
+##### screen.drawTextOutline( text, x, y, size, &lt;color&gt; )
+Draws the outline of the text. Drawing an outline in a different color can be done after a ```drawText``` to increase the contrast. The thickness of the outline can be set with ```screen.setLineWidth```.
+<!--- suggest_end --->
+
+```
+screen.drawTextOutline("Hello!",0,0,30, "#F00")
 ```
 
 ---
