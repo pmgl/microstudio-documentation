@@ -762,8 +762,8 @@ La couleur est définie par une chaîne de caractères, donc entre guillemets ""
 
 ### Effacer l'écran
 <!--- suggest_start screen.clear --->
-##### screen.clear()
-Efface l'écran (le remplit de noir).
+##### screen.clear( couleur )
+Efface l'écran en le remplissant soit de la couleur passée en paramètre, soit de noir si aucune couleur n'est passée en paramètre.
 <!--- suggest_end --->
 
 ### Dessiner des formes
@@ -889,6 +889,16 @@ Dessine du texte à l'écran. Le premier paramètre est le texte à afficher, pu
 
 ```
 screen.drawText("Bonjour !",0,0,30,"#FFF")
+```
+
+
+<!--- suggest_start screen.drawTextOutline --->
+##### screen.drawTextOutline( text, x, y, size, &lt;color&gt; )
+Dessine le contour du texte. On peut dessiner le contour dans une couleur différente, après un ```drawText``` pour augmenter le contraste. L'épaisseur du contour peut être réglée avec ```screen.setLineWidth```.
+<!--- suggest_end --->
+
+```
+screen.drawTextOutline("Hello!",0,0,30, "#F00")
 ```
 
 ---
