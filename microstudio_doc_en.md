@@ -827,10 +827,25 @@ Draws a polygon outline, defined by the list of point coordinates passed as argu
 
 The function can also accept an array as first argument and a color as second argument. In that case, the array is expected to hold the points coordinates like this: ```screen.drawPolygon( [ x1, y1 , x2, y2, x3, y3 ... ], color )```.
 
+<!--- suggest_start screen.drawPolyline --->
+##### screen.drawPolyline( x1, y1, x2, y2, x3, y3, ... , color )
+Same as `drawPolygon` except that the drawing path will not be automatically closed.
+
 <!--- suggest_start screen.setLineWidth --->
 ##### screen.setLineWidth( width )
 Sets the line width for all subsequent line draw operation (drawLine, drawPolygon, drawRect etc.). The default line width is 1.
 <!--- suggest_end --->
+
+<!--- suggest_start screen.setLineDash --->
+##### screen.setLineDash( array_of_values )
+Sets the line dash style for all subsequent line draw operation (drawLine, drawPolygon, drawRect etc.). The argument must be an array of positive values, defining the length of lines and gaps.
+
+#### example
+```
+screen.setLineDash([2,4])
+```
+<!--- suggest_end --->
+
 
 ### Display sprites and maps
 
@@ -1034,6 +1049,12 @@ screen.setDrawAnchor(-1,0) // useful to align text on the left
 screen.setDrawAnchor(-1,-1) // your drawing coordinates are now interpreted as the bottom left corner of your shape.
 screen.setDrawAnchor(0,0) // default value, all shapes will be drawn centered on your coordinates
 ```
+
+<!--- suggest_start screen.setDrawAnchor --->
+##### screen.setBlending( blending )
+Defines how subsequent drawing operations will be composed with the underlying, already drawn image. Can be set to `normal` or `additive`.
+
+You can also use any of the compositing modes defined in the HTML5 Canvas specification with `setBlending`, for reference see https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 
 <!--- suggest_start screen.width --->
 ##### screen.width
