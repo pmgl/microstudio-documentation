@@ -830,6 +830,7 @@ The function can also accept an array as first argument and a color as second ar
 <!--- suggest_start screen.drawPolyline --->
 ##### screen.drawPolyline( x1, y1, x2, y2, x3, y3, ... , color )
 Same as `drawPolygon` except that the drawing path will not be automatically closed.
+<!--- suggest_end --->
 
 <!--- suggest_start screen.setLineWidth --->
 ##### screen.setLineWidth( width )
